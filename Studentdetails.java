@@ -8,6 +8,11 @@ class Student{
     public int getId(){
         return id;
     }
+    Student(int id,String name,int score){
+        this.id=id;
+        this.name=name;
+        this.score=score;
+    }
     public String getName(){
         return name;
     }
@@ -46,6 +51,7 @@ public class Studentdetails{
         System.out.println("Enter a score:");
         int studentScore=sc.nextInt();
         Student s= new Student();
+        s.setDetails(studentId,studentName,studentScore);
         s.displayDetails(studentId,studentName,studentScore);
         System.out.println("Student Passed?");
 
