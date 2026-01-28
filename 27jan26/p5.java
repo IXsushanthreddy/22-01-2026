@@ -29,14 +29,14 @@ public class p5 {
         Set<Integer> studentIds = new HashSet<>();
         List<String> validStudents = new ArrayList<>();
                 try {
-            bufferedReader = new BufferedReader(
-                    new InputStreamReader(new FileInputStream(inputFile))
+                    bufferedReader = new BufferedReader(new InputStreamReader(new FileInputStream(inputFile))
             ); 
             validWriter = new BufferedWriter(new FileWriter(validFile));
             invalidWriter = new BufferedWriter(new FileWriter(invalidFile));
             String line = bufferedReader.readLine();
 
                  while(line!=null){
+                     //checking the validity
                     try {
                     processLine(line, studentIds, validStudents, validWriter);
                 } catch (InvalidStudentException | NumberFormatException e) {
@@ -63,7 +63,7 @@ public class p5 {
 
         }
     }
-
+// validity function
 private static void processLine(String line,Set<Integer> studentIds,List<String> validStudents,BufferedWriter validWriter) throws Exception{
     String[] data = line.split(",");
         //checking the n=3 such that each is separated by column
